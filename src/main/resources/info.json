@@ -2,5 +2,5 @@
   "name": "NationModule",
   "authors": ["TAMaurice", "MickMMars"],
   "version": "1.0.0",
-  "main": "net.pixlies.Main"
+  "main": "net.pixlies.ModuleMain"
 }
