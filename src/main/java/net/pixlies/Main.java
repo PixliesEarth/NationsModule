@@ -1,16 +1,17 @@
 package net.pixlies;
 
-import net.pixlies.modules.Module;
+import com.mongodb.client.MongoCollection;
+import lombok.Getter;
+import org.bson.Document;
+import org.bukkit.plugin.java.JavaPlugin;
 
-public class Main extends Module {
+public class Main extends JavaPlugin {
 
-    @Override
-    public void onLoad() {
-        System.out.println("Loaded this successfully");
-    }
+    private static @Getter Main instance;
+    private static @Getter MongoCollection<Document> nationCollection;
 
-    @Override
-    public void onDrop() {
-        System.out.println("Dropped this successfully");
+    public void initialize(Main main) {
+        instance = main;
+
     }
 }
