@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.purpurmc.purpur:purpur-api:1.18-R0.1-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/purpurmc/purpur/purpur-api/1.18-R0.1-SNAPSHOT/purpur-api-1.18-R0.1-20211210.034959-5.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/purpurmc/purpur/purpur-api/1.18-R0.1-SNAPSHOT/purpur-api-1.18-R0.1-20211210.034959-5-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/purpurmc/purpur/purpur-api/1.18-R0.1-SNAPSHOT/purpur-api-1.18-R0.1-20211210.034959-5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
