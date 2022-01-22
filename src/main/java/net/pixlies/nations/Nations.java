@@ -30,7 +30,7 @@ public class Nations extends Module {
         return handlerManager;
     }
 
-    public static Nations getInstance() {
+    public static Nations getNationsInstance() {
         return instance;
     }
 

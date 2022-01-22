@@ -2,11 +2,9 @@ package net.pixlies.nations.commands.impl;
 
 import net.pixlies.acf.BaseCommand;
 import net.pixlies.acf.CommandHelp;
-import net.pixlies.acf.annotation.CommandAlias;
-import net.pixlies.acf.annotation.Default;
-import net.pixlies.acf.annotation.HelpCommand;
+import net.pixlies.acf.annotation.*;
 
-@CommandAlias("nation|nations|n|faction|factions|f|country|countries")
+@CommandAlias("nation|n")
 public class NationCommand extends BaseCommand {
 
     @Default
@@ -14,5 +12,14 @@ public class NationCommand extends BaseCommand {
     public void onHelp(CommandHelp help) {
         help.showHelp();
     }
+
+    @Subcommand("create")
+    @Description("Creates a nation")
+    @Syntax("<+tag> NAME")
+    public void onCreate() {
+
+    }
+
+
 
 }

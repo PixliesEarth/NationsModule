@@ -5,7 +5,7 @@ import net.pixlies.nations.Nations;
 
 public class RegisterHandlerManager {
 
-    private static final Nations instance = Nations.getInstance();
+    private static final Nations instance = Nations.getNationsInstance();
 
     private final ImmutableList<Class<? extends Handler>> handlers = ImmutableList.of(
             // ADD HANDLERS HERE AS CLASS (SomeHandler.class)
