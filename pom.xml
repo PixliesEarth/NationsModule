@@ -26,6 +26,13 @@
             <version>1.18-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>net.pixlies</groupId>
+            <artifactId>PixliesCoreV2</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/PixliesCore.jar</systemPath>
+        </dependency>
     </dependencies>
 
     <build>

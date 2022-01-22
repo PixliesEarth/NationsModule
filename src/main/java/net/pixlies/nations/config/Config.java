@@ -1,31 +1,30 @@
 package net.pixlies.nations.config;
 
-import net.pixlies.Main;
+import net.pixlies.nations.Nations;
+import net.pixlies.nations.utils.ResourceReader;
 import org.apache.commons.io.FileUtils;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.YamlConfiguration;
 
-import java.io.*;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.Reader;
 import java.nio.charset.StandardCharsets;
 import java.util.Objects;
 
 public class Config extends YamlConfiguration {
 
-    private static final Main instance = Main.getInstance();
+    private static final Nations instance = Nations.getInstance();
 
     private final File file;
     private final String localDefaultsName;
 
-    /**
-     * Nice config.
-     * @param file The path where you want to save your config.
-     * @param localDefaultsName The local file in the jar file.
-     */
     public Config(File file, String localDefaultsName) {
         this.file = file;
         this.localDefaultsName = localDefaultsName;
         try {
-            Reader stream = new InputStreamReader(Objects.requireNonNull(instance.getResource(localDefaultsName)), StandardCharsets.UTF_8);
+            Reader stream = new InputStreamReader(Objects.requireNonNull(ResourceReader.getResource(localDefaultsName)), StandardCharsets.UTF_8);
             YamlConfiguration config = new YamlConfiguration();
             config.load(stream);
             this.setDefaults(config);
@@ -74,7 +73,7 @@ public class Config extends YamlConfiguration {
         }
 
         try {
-            FileUtils.copyInputStreamToFile(Objects.requireNonNull(instance.getResource(localDefaultsName)), file);
+            FileUtils.copyInputStreamToFile(Objects.requireNonNull(ResourceReader.getResource(localDefaultsName)), file);
         } catch (IOException e) {
             e.printStackTrace();
             instance.getLogger().warning("Failed to create " + file.getName() + ".");
